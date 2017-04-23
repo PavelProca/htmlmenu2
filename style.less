@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@menu-bg: #333D47;
 * {
 	margin: 0;
 	padding: 0;
@@ -51,7 +52,7 @@ body {
 }
 .first-level {
 	width: 240px;
-	background: #333D47;
+	background: @menu-bg;
 }
 .submenu {
 	max-height: 0px;
@@ -68,7 +69,7 @@ body {
 }
 .submenu.active {
 	transition: all 1s ease;
-	max-height: 200px;
+	max-height: 760px;
 }
 .side-menu .menu-element {
 	height: 60px;
@@ -78,7 +79,7 @@ body {
 	color: rgba(255,255,255,0.8);
 	white-space: nowrap;
 	cursor: pointer;
-	background: #333D47;
+	background: @menu-bg;
 	&:hover {
 		padding-left: 14px;
 		border-left: 4px solid #92DEFF;
@@ -97,7 +98,8 @@ input[type="radio"]:checked + label .menu-element{
 	svg {fill: #fff;}
 }
 .menu-section {
-	margin-top: 20px;
+	padding-top: 20px;
+	background: @menu-bg;
 	h2 {
 		margin-left: 12px;
 		text-transform: uppercase;
@@ -139,6 +141,7 @@ input[type="radio"]:checked + label .menu-element{
 	position: relative;
 	top: -25px;
 	right: -186px;
+	transform: rotate(90deg);
 }
 svg {fill: rgba(255, 255, 255, 0.6);}
 
@@ -146,10 +149,15 @@ svg {fill: rgba(255, 255, 255, 0.6);}
 
 #content {
 	height: 1000px;
+	position: relative;
 	margin: 30px;
 	background: #fff;
 	img {
-		max-width: 500px;
-		height: auto;
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -200px 0 0 -200px;
 	}
 }

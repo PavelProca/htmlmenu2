@@ -26,11 +26,11 @@ function check(menu, label) {
 			break;
 		case 2:
 			document.getElementsByClassName('submenu')[1].classList.remove("active");
-			document.getElementsByClassName('submenu')[0].classList.add("active");
+			document.getElementsByClassName('submenu')[0].classList.toggle("active");
 			break;
 		case 3:
 			document.getElementsByClassName('submenu')[0].classList.remove("active");
-			document.getElementsByClassName('submenu')[1].classList.add("active");
+			document.getElementsByClassName('submenu')[1].classList.toggle("active");
 			break;
 		case 2.1: case 2.2: case 2.3: 
 		case 3.1: case 3.2: case 3.3:
